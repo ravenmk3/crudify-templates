@@ -1,0 +1,15 @@
+database:
+  host: misaka
+  port: 3306
+  username: root
+  password: mysql
+  database: demo
+variables:
+  Author: Raven
+  AppName: demo
+  AppNamePascalCase: Demo
+  BasePackage: com.example.demo
+  JavaBasePath: com/example/demo
+  MavenGroupId: com.example
+  MavenArtifactId: demo
+  MavenModuleVersion: 0.0.1-SNAPSHOT

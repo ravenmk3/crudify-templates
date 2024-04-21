@@ -1,0 +1,34 @@
+variables:
+  Author: Raven
+  AppName: demo
+  AppNamePascalCase: Demo
+  BasePackage: com.example.demo
+  JavaBasePath: com/example/demo
+  MavenGroupId: com.example
+  MavenArtifactId: demo
+  MavenModuleVersion: 0.0.1-SNAPSHOT
+global-scripts:
+  - global.js
+global-templates:
+  - file: global/gitignore.tpl
+    output: .gitignore
+  - file: global/pom.xml.tpl
+    output: pom.xml
+  - file: global/Application.java.tpl
+    output: src/main/java/{{.Vars.JavaBasePath}}/{{.Vars.AppNamePascalCase}}Application.java
+  - file: global/application.yaml.tpl
+    output: src/main/resources/application.yaml
+entity-scripts:
+  - entity.js
+entity-templates:
+  - file: entity/Entity.java.tpl
+    script: entity/Entity.java.js
+    output: src/main/java/{{.Vars.JavaBasePath}}/entity/{{.Vars.EntityClass}}.java
+  - file: entity/Repository.java.tpl
+    output: src/main/java/{{.Vars.JavaBasePath}}/repository/{{.Vars.EntityClass}}Repository.java
+  - file: entity/Service.java.tpl
+    output: src/main/java/{{.Vars.JavaBasePath}}/service/{{.Vars.EntityClass}}Service.java
+  - file: entity/ServiceImpl.java.tpl
+    output: src/main/java/{{.Vars.JavaBasePath}}/service/impl/{{.Vars.EntityClass}}ServiceImpl.java
+  - file: entity/Controller.java.tpl
+    output: src/main/java/{{.Vars.JavaBasePath}}/controller/{{.Vars.EntityClass}}Controller.java
