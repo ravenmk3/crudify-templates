@@ -10,6 +10,7 @@ var vars = {
     'IdDataType': table.PrimaryKeyColumn().JavaDataType(),
     'RepoField': table.NameCamelCase() + 'Repo',
     'ServiceField': table.NameCamelCase() + 'Service',
+    'RestApiPath': Utils.ToPluralKebabCase(table.Name),
 }
 
 for (var key in vars) {

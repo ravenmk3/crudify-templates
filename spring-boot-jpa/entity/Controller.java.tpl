@@ -14,7 +14,7 @@ import org.springframework.web.bind.annotation.*;
  */
 @Slf4j
 @RestController
-@RequestMapping("/api/{{.Table.NameKebabCase}}s")
+@RequestMapping("/api/{{.Vars.RestApiPath}}")
 @RequiredArgsConstructor
 public class {{.Vars.EntityClass}}Controller {
 
